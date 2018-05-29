@@ -56,6 +56,14 @@ class Dog
      new_dog
   end
 
+  def self.find_or_create_by
+    if self.id
+      self.find_by_id(id)
+    else
+      self.create(name:, breed:)
+    end
+  end
+
 
 
 
