@@ -53,7 +53,7 @@ class Dog
     new_dog = Dog.new(array[1], array[2], array[0])
     new_dog
   end
- 
+
 
 
 
