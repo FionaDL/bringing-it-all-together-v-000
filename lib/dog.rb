@@ -52,8 +52,8 @@ class Dog
      WHERE id = ?
     SQL
      array = DB[:conn].execute(sql, id)[0]
-     binding.pry
-    self
+     new_dog = Dog.new(name: array[1], breed: array[2], id: array[0])
+     new_dog
   end
 
 
