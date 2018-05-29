@@ -49,8 +49,8 @@ class Dog
      FROM dogs
      WHERE id = ?
     SQL
-     DB[:conn].execute(sql, id).map do |row|
-       self.create(name: row[1], breed: row[2], id:row[0])
+     array = DB[:conn].execute(sql, id)[0]
+     binding.pry
      end
     self
   end
