@@ -20,7 +20,7 @@ class Dog
         )
       SQL
       DB[:conn].execute(sql)
-  end
+   end
 
   def self.drop_table
     sql = <<-SQL
@@ -53,7 +53,6 @@ class Dog
     SQL
      array = DB[:conn].execute(sql, id)[0]
      binding.pry
-     end
     self
   end
 
