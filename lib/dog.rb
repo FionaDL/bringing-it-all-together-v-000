@@ -67,12 +67,7 @@ class Dog
  end
 
  def self.new_from_db(row)
-   sql = <<-SQL
-    SELECT * FROM dogs
-  SQL
-
-    DB[:conn].execute(sql)
-    binding.pry
+  new_dog = Dog.new(name: row[1], breed: row[2], id: row[0])
 end
 
 
