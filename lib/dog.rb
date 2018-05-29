@@ -49,7 +49,9 @@ class Dog
      FROM dogs
      WHERE id = ?
     SQL
-    DB[:conn].execute(sql, self.id)
+    array = DB[:conn].execute(sql, id)
+    new_dog = Dog.new(array[1], array[2], array[0])
+    new_dog
   end
  
 
