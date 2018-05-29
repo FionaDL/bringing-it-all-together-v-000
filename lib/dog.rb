@@ -66,6 +66,14 @@ class Dog
    end
  end
 
+ def self.new_from_db(row)
+   sql = <<-SQL
+    SELECT * FROM dogs
+  SQL
+
+    DB[:conn].execute(sql)
+end
+
 
 
 
