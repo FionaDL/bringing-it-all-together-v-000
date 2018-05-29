@@ -72,6 +72,7 @@ class Dog
   SQL
 
     DB[:conn].execute(sql)
+    binding.pry
 end
 
 
