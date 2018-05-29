@@ -49,7 +49,7 @@ class Dog
      FROM dogs
      WHERE id = ?
     SQL
-    DB[:conn].execute(sql, id)
+    DB[:conn].execute(sql, self.id)
   end
  
 
